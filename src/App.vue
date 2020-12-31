@@ -1,9 +1,13 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+  </div> -->
+  <div class="px-16 py-6 bg-neutral-300 h-screen">
+    <div class="bg-neutral-50 rounded-md shadow-md mx-w-md mx-auto p-8">
+      <router-view />
+    </div>
   </div>
-  <router-view />
 </template>
 <style src="./assets/tailwind.css" />
 <style>

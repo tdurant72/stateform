@@ -1,15 +1,12 @@
 <template>
-  <div class="pt-2 flex flex-col items-start">
-    <label class="text-sm text-neutral-800">Name</label>
-    <input
-      type="text"
-      class="border-neutral-800 border-2 pl-2 rounded-md h-10"
-      placeholder="Full name here"
-      v-model="state.name"
-    />
+  <div>
+    <BaseInput label="Full Name" v-model="state.name" />
+    <BaseInput label="Email" v-model="state.email" />
+    <BaseInput label="Phone Number" v-model="state.phone" />
   </div>
-  <div class="flex ">
-    <SecondaryBtn label="Home" @click="navPrev" />
+
+  <div class="flex justify-between">
+    <PrimaryInvertedBtn label="Home" @click="navPrev" />
     <PrimaryBtn label="Step 2" @click="navNext" />
   </div>
 </template>
@@ -18,12 +15,14 @@
 import global from "../global";
 import router from "../router";
 import PrimaryBtn from "../components/UI/PrimaryBtn";
-import SecondaryBtn from "../components/UI/SecondaryBtn";
+import PrimaryInvertedBtn from "../components/UI/PrimaryInvertedBtn";
+import BaseInput from "../components/UI/BaseInput";
 // import { ref, reactive } from "vue";
 export default {
   components: {
     PrimaryBtn,
-    SecondaryBtn,
+    PrimaryInvertedBtn,
+    BaseInput,
   },
   setup() {
     const { state } = global;
